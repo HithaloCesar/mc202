@@ -46,6 +46,7 @@ void mobius_multiplication(int u[], int T) {
 void cyclic_movement(int u[], int T) {
     int P;
     scanf("%d", &P);
+    /* Método utilizado: uso de vetor de int como aux. */
     int aux[P];
     for (int i = 0; i < P; i++)
         aux[i] = u[T-P+i];
@@ -53,15 +54,16 @@ void cyclic_movement(int u[], int T) {
         u[i] = u[i-P];
     for (int i = 0; i < P; i++)
         u[i] = aux[i];
-    /* Outro método: um a um, repetidamente.
-    int aux;
-    for (int i = 0; i < P; i++) {
-        aux = u[T-1];
-        for (int j = T; j > 0; j--)
-            u[j] = u[j-1];
-        u[0] = aux;
-    }
-    */
+    /* 
+     * Método alternativo: uso de variável int como aux.
+     * int aux;
+     * for (int i = 0; i < P; i++) {
+     *     aux = u[T-1];
+     *     for (int j = T; j > 0; j--)
+     *         u[j] = u[j-1];
+     *     u[0] = aux;
+     * }
+     */
 }
 
 /**
