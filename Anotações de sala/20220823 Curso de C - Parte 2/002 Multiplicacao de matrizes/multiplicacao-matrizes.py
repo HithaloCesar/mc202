@@ -1,7 +1,13 @@
+from math import prod
+
+
 def fix_matrix(matrixes):
     for m in matrixes:
-
-    pass
+        max_col = max(m)
+        for row in m:
+            for _ in range(len(max_col) - len(row)):
+                row.append(0)
+    return matrixes
 
 
 def read_matrixes(matrix_count):
@@ -12,11 +18,26 @@ def read_matrixes(matrix_count):
         while do or line != []:
             do = False
             line = [int(x) for x in input().split()]
-            matrixes[m].append(line)
+            if line != []:
+                matrixes[m].append(line)
     return fix_matrix(matrixes)
 
-def multiply_matrixes(ms):
-    pass
+def multiply_matrixes(matrixes):
+    product = matrixes[0]
+    for m in range(1, len(matrixes)):
+        product[i][
+        product[i][k] *= matrixes[m][k][j]
+    if
+    return product
+
+1 2
+3 4
+5 6
+
+1 2 3
+4 5 6
+
+(1 * 1) + ()
 
 
 def print_matrix(m):

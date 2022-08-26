@@ -60,7 +60,7 @@ void cyclic_movement(int u[], int T) {
  * \param[in] u: Vetor de inteiros n1, n2, ..., nT.
  * \param[in] T: Tamanho do vetor u.
  */
-void vector_inversion(int u[], int T) {
+void array_inversion(int u[], int T) {
     int aux;
     for (int i = 0; i < T / 2; i++) {
         aux = u[i];
@@ -78,18 +78,18 @@ void operate(int u[], int T) {
     int operation;
     scanf("%d", &operation);
     switch (operation) {
-    case 1:
-        banner_set(u, T);
-        break;
-    case 2:
-        mobius_multiplication(u, T);
-        break;
-    case 3:
-        cyclic_movement(u, T);
-        break;
-    case 4:
-        vector_inversion(u, T);
-        break;
+        case 1:
+            banner_set(u, T);
+            break;
+        case 2:
+            mobius_multiplication(u, T);
+            break;
+        case 3:
+            cyclic_movement(u, T);
+            break;
+        case 4:
+            array_inversion(u, T);
+            break;
     }
 }
 
@@ -98,7 +98,7 @@ void operate(int u[], int T) {
  * \param[in] u: Vetor de inteiros n1, n2, ..., nT.
  * \param[in] T: Tamanho do vetor u.
  */
-void print_vector(int u[], int T) {
+void print_array(int u[], int T) {
     for (int i = 0; i < T; i++)
         if (i != T-1)
             printf("%d ", u[i]);
@@ -119,7 +119,7 @@ int main(void) {
     scanf("%d", &operation_count);
     for (int i = 0; i < operation_count; i++) {
         operate(u, T);
-        print_vector(u, T);
+        print_array(u, T);
     }
     return 0;
 }
