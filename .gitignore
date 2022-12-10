@@ -1,0 +1,4 @@
+*-ans.txt
+gmon.out
+*.o
+bin/
