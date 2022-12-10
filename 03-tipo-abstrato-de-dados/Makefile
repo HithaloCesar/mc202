@@ -35,6 +35,7 @@ testar_tudo: $(MAIN)
 		echo "Testando $$entrada: " ; \
 		if diff "$$resposta" "$$saida" ;  then \
 			echo "OK" ; \
+			rm -f testes/*-ans.txt ; \
 		else \
 			echo "***********************************"; \
 			echo "Falhou para $$entrada" ; \
