@@ -3,7 +3,7 @@ MAIN = lab09
 SRC = $(wildcard *.c)
 OBJ = $(patsubst %.c, %.o, $(SRC))
 CC = gcc
-GFLAGS = -std=c99 -Wall -Werror -Werror=vla -g -lm -pg
+GFLAGS = -std=c99 -Wall -Werror -Werror=vla -g -lm
 
 $(MAIN): $(OBJ)
 	rm -f -r bin/
